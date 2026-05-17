@@ -1,0 +1,26 @@
+@model CarServiceWorkshop.Web.Models.Order
+
+<h2>Edit Order</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="card">
+
+        <label>Car</label>
+        <select asp-for="CarId" asp-items="ViewBag.CarId" class="form-control"></select>
+
+        <label>Description</label>
+        <input asp-for="Description" class="form-control" />
+
+        <label>Estimated Cost</label>
+        <input asp-for="EstimatedCost" class="form-control" />
+
+        <label>Status</label>
+        <select asp-for="Status" asp-items="ViewBag.StatusList" class="form-control"></select>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:15px;">Save</button>
+    </div>
+</form>

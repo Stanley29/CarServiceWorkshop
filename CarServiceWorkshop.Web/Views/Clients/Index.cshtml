@@ -1,0 +1,32 @@
+@model IEnumerable<CarServiceWorkshop.Web.Models.Client>
+
+<h1>Clients</h1>
+<a class="btn btn-primary" asp-action="Create">Create New Client</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Cars</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var c in Model)
+{
+        <tr>
+            <td>@c.FullName</td>
+            <td>@c.Phone</td>
+            <td>@c.Email</td>
+            <td>@c.Cars.Count</td>
+            <td>
+                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@c.Id">Details</a>
+                <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@c.Id">Edit</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@c.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

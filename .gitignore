@@ -1,0 +1,58 @@
+## Build results
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## Visual Studio
+.vs/
+*.dbmdl
+*.jfm
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+
+## Logs
+logs/
+*.log
+
+## Publish output
+publish/
+dist/
+
+## NuGet
+*.nupkg
+packages/
+.nuget/
+
+## OS files
+Thumbs.db
+.DS_Store
+
+## Node (if used)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+## EF Core Migrations cache
+Migrations/obj/
+
+## Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,36 @@
+@model IEnumerable<CarServiceWorkshop.Web.Models.Order>
+
+<h1>Orders</h1>
+<a class="btn btn-primary" asp-action="Create">Create New Order</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Car</th>
+            <th>Client</th>
+            <th>Created</th>
+            <th>Description</th>
+            <th>Estimated Cost</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var o in Model)
+{
+        <tr>
+            <td>@o.Car.PlateNumber (@o.Car.Brand @o.Car.Model)</td>
+            <td>@o.Car.Client.FullName</td>
+            <td>@o.CreatedAt.ToLocalTime()</td>
+            <td>@o.Description</td>
+            <td>@o.EstimatedCost.ToString("C")</td>
+            <td>@o.Status</td>
+            <td>
+                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@o.Id">Details</a>
+                <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@o.Id">Edit</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@o.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

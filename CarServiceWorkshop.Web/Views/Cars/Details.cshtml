@@ -1,0 +1,15 @@
+@model CarServiceWorkshop.Web.Models.Car
+
+<h2>Car Details</h2>
+
+<div class="card">
+
+    <p><strong>Plate:</strong> @Model.PlateNumber</p>
+    <p><strong>Brand:</strong> @Model.Brand</p>
+    <p><strong>Model:</strong> @Model.Model</p>
+    <p><strong>Client:</strong> @Model.Client?.FullName (@Model.ClientId)</p>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+
+</div>

@@ -1,0 +1,20 @@
+@model CarServiceWorkshop.Web.Models.Client
+
+<h2>Edit Client</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="card">
+
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" />
+
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form-control" />
+
+        <button type="submit" class="btn btn-primary" style="margin-top:15px;">Save</button>
+    </div>
+</form>
